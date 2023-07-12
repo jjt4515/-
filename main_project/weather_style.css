@@ -1,0 +1,106 @@
+body{
+    width: 1060px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 3rem;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+select {
+    padding: 8px;
+    font-size: 16px;
+}
+
+.select {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.goback-button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 14px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    /* float, clear */
+    float: right;
+    clear: both;
+}
+/* pseudo-class */
+.goback-button:hover {
+    background-color: #45a049;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    height: 120px;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+}
+
+td{
+    font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* pseudo-class */
+tr:hover {
+    background-color: #dddddd;
+}
+  
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* 모바일 환경 대응 */
+@media (max-width: 900px) {
+    body {
+        width: 100%;
+    }
+  
+    th{
+        font-size: 12px;
+    }
+
+    td {
+        font-size: 10px;
+    }
+
+    .select{
+        margin-left: 10px;
+    }
+
+    .goback-button{
+        margin-right: 10px;
+    }
+
+    .table-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    body > h1{
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>calendar</title>
+    <!-- 화면 해상도에 따라 글자 크기 대응(모바일 대응) -->
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- jquery, ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- bootstrap 4, modal을 사용하기 위해 bootstrap을 추가 -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- css파일 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- fullcalendar API -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.7.0/main.min.js"></script>
+    <!-- js파일 -->
+    <script src="main.js"></script>
+</head>
+<body>
+<!-- header활용 -->
+<header class="head">
+    <h1>My schedule</h1>
+    <!-- 메뉴에 nav활용 -->
+    <nav class="rightHead">
+        <a class="weatherInformation" href="weather.html">
+            날씨정보
+        </a>
+    </nav>
+</header>
+<div id="calendarBox-container">
+    <div id="calendarBox">
+        <div id="calendar"></div>
+    </div>
+</div>
+
+<!-- footer활용 -->
+<footer>
+    <div id="footerDiv"></div>
+</footer>
+
+<!-- modal 추가 -->
+<div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">일정을 입력하세요.</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <!-- 일정추가 input -->
+                    <label for="taskId" class="col-form-label">일정 내용</label>
+                    <input type="text" class="form-control" id="calendar_content" name="calendar_content">
+                    <label for="taskId" class="col-form-label">시작 날짜</label>
+                    <input type="date" class="form-control" id="calendar_start_date" name="calendar_start_date">
+                    <label for="taskId" class="col-form-label">종료 날짜</label>
+                    <input type="date" class="form-control" id="calendar_end_date" name="calendar_end_date">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-warning" id="addCalendar">추가</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"
+                        id="sprintSettingModalClose">취소</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

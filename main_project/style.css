@@ -1,0 +1,92 @@
+body {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.head {/* flex */
+    display: flex;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+/* combinator */
+.head h1{
+    font-weight: 900; color:#202020;
+    font-size: 2.8rem;
+}
+
+.rightHead{/* flex */
+    display: flex;
+    align-items: flex-end;
+}
+.weatherInformation {
+    padding: 10px;
+    border-radius: 5px;
+    order: 1;
+}
+/* attribute selector, a태그로 감싸진 날씨정보 글자 폰트 바꾸기 */
+a[href="weather.html"] { 
+    font-weight: 900; color:#202020;
+    font-size: 1.3rem;
+}
+/* pseudo-class, 밑줄 없앰*/
+.weatherInformation:hover{ 
+    text-decoration: none;
+}
+/* pseudo-element, 날씨정보 오른쪽에 그림 붙이기 */
+.weatherInformation::after{
+    content:"";
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQszO-mAuIl6lu9vlBltj3ve7d-Kg5X4C6bcQb3bpb6qJAYRVdSiajpq-FLAAFr8g3UFio&usqp=CAU");
+    background-size:40px 40px;
+    width:40px;
+    height:40px;
+    vertical-align: middle;
+    display:inline-block;
+}
+#calendarBox {
+    margin: 0 auto;
+    width: 90%;
+}
+/* attribute selector, main페이지의 footer요소 꾸미기 */
+div[id^="footer"]{
+    display: block;
+    height: 50px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* 모바일 환경 대응 */
+@media (max-width: 900px) {
+    body {
+        width: 100%; 
+    }
+
+    .head {
+        flex-direction: column; 
+        padding-top: 20px;
+        padding-bottom: 30px;
+        align-items: center;
+    }
+
+    .head h1 {
+        font-size: 2.2rem; 
+    }
+
+    #calendarBox {
+        width: 100%; 
+    }
+
+    div[id^="footer"] {
+        width: 100%; 
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #calendarBox-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

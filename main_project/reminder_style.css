@@ -1,0 +1,120 @@
+body{
+    width: 1060px;
+    margin: 0 auto;
+}
+.head {
+    width:90%;
+    margin: 0 auto;
+    padding:10px;
+    justify-content: space-between;
+}
+/* combinator */
+.head h1{
+    text-align: center;
+    font-weight: 900; color:#202020;
+    font-size: 50px;
+}
+/* flex */
+.left{
+    display: flex;
+    align-items: flex-end;
+}
+/* combinator */
+.left #selectedDate{
+    padding: 10px;
+    border-radius: 5px;
+    order: 1;
+}
+/* pseudo-element, 리마인더에 표시되는 날짜 폰트 바꾸기*/
+#selectedDate::first-line{
+    font-weight: 900; color:#202020;
+    font-size: 1.1rem;
+}
+#reminderList{
+    width: 90%;
+    margin: 0 auto;
+    padding-inline-start: 0px;
+}
+#reminderFooter{
+    width:90%;
+    margin: 0 auto;
+}
+/* flex */
+.reminder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+/* combinator */
+.reminder .event {
+    flex-grow: 1;
+    font-size: larger;
+    margin-left:10px;
+    font-family: 'Sunflower', sans-serif;
+    list-style-type: none;
+}
+
+/* pseudo-class, 리마인더 내용 수정시 보이는 선 삭제*/
+.event:focus {
+    outline: none;
+}
+/* combinator */
+.reminder .delete {
+    color: #fff;
+    background-color: #4670a7;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+  
+#eventInput {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+  
+button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* pseudo-class */
+button:hover {
+    background-color: #45a049;
+}
+button.delete:hover {
+    background-color: #d32f2f;
+}
+.go-back-button:hover {
+    background-color: #0056b3;
+}
+
+.go-back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* float */
+    float:right;
+}
+
+/* 모바일 환경 대응 */
+@media (max-width: 900px) {
+    body{
+        width: 100%;
+    }
+
+}

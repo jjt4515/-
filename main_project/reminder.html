@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reminder</title>
+    <!-- css파일 -->
+    <link rel="stylesheet" href="reminder_style.css">
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <!-- header활용 -->
+    <header class="head">
+        <h1>Reminder</h1>
+        <div class="left">
+            <p id="selectedDate"></p>
+        </div>
+    </header>
+    <!-- 리마인더 내용 출력, 리스트활용 -->
+    <ul id="reminderList"></ul>
+    <div id="reminderFooter">
+        <!-- 리마인더 내용 인풋 -->
+        <input type="text" id="eventInput" placeholder="Enter event">
+        <button onclick="addReminder()">Add Reminder</button>
+        <button class="go-back-button" onclick="goBack()">Go Back</button>
+    </div>
+    <!-- js파일 -->
+    <script src="reminder.js"></script>
+</body>
+</html>
